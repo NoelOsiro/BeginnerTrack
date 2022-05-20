@@ -1,8 +1,13 @@
 #!/bin/bash
+#Takes in an array of inputs and computes average
+# E.g ./computeAverage 4 1 2 8 9
+
 array=( "$@" )
 first=${array[0]}
+
 #remove First element
 unset array[0]
+
 tot=0
 for i in ${array[@]}; do
   let tot+=$i
