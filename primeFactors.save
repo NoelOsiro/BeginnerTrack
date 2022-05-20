@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Pass in the number parameter and initialize empty Factors array
+number=$1
+Factors=()
+
+factor=2
+# While $num is greater than 1
+while ((factor ** 2 <= number)); do
+	while ((number % factor == 0)); do
+		# Add $factor to $factors with a space
+		factors+=$factor
+		# Divide $num by $factor
+		((num /= factor))
+	done
+	# If factor is 2
+	# Then increment $factor by 1
+
+	((factor += (factor == 2) ? 1 : 2))
+done
+# If $num is greater than 1, it is a prime factor,
+if ((num > 1)); then
+	# So add it to $factors.
+	factors+="$num"
+# Else if the length of factors is greater than 1,
+elif ((${#factors} > 1)); then
+	# Then remove the last space
+	factors="${factors::-1}"
+fi
+echo "$factors"
