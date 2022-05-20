@@ -1,0 +1,11 @@
+#!/bin/bash
+array=( "$@" )
+first=${array[0]}
+#remove First element
+unset array[0]
+tot=0
+for i in ${array[@]}; do
+  let tot+=$i
+done
+printf "%0.3f\n" $(echo "$tot / $first" | bc -l)
+
