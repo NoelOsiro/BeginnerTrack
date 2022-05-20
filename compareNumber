@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#https://github.com/NoelOsiro/BeginnerTrack/blob/main/compareNumber
 #read inputs
 echo "Program to compare numbers"
 echo "Enter first number"
