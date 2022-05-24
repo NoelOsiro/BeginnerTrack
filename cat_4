@@ -1,5 +1,5 @@
 #!/bin/bash
 while read line
 do
-echo $line | cut -c 2,7
+echo $line | cut -c-4
 done
