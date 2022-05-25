@@ -1,0 +1,4 @@
+#!/bin/bash
+#Takes file as argument input
+head -c 20 $1
+
